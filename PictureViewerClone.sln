@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureViewerClone", "PictureViewerClone\PictureViewerClone.csproj", "{B97B42CC-F768-414F-A4C1-5A1949815E62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureViewer", "PictureViewerClone\PictureViewer.csproj", "{B97B42CC-F768-414F-A4C1-5A1949815E62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

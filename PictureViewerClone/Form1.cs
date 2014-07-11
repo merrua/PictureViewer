@@ -22,6 +22,8 @@ namespace PictureViewerClone
             this.FormBorderStyle = FormBorderStyle.Fixed3D;
         }
 
+        #region buttons
+
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
@@ -60,5 +62,31 @@ namespace PictureViewerClone
         {
             this.Close();
         }
+
+        #endregion
+
+        #region menu
+        private void mainMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void OpenFileMenuItem_Click(object sender, EventArgs e)
+        {
+            // Show the Open File dialog. If the user clicks OK, load the 
+            // picture that the user chose. 
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Load(openFileDialog1.FileName);
+            }
+        }
+
+        private void ExitFileMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        #endregion menu
+
     }
 }
