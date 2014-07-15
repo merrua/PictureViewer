@@ -45,6 +45,7 @@
             this.ExitFileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Save = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -66,7 +67,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(608, 312);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(657, 312);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -76,7 +77,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(602, 274);
+            this.pictureBox1.Size = new System.Drawing.Size(651, 274);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -97,16 +98,18 @@
             this.flowLayoutPanel1.Controls.Add(this.backgroundButton);
             this.flowLayoutPanel1.Controls.Add(this.clearButton);
             this.flowLayoutPanel1.Controls.Add(this.showButton);
+            this.flowLayoutPanel1.Controls.Add(this.Save);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(94, 283);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(101, 283);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(511, 26);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(553, 26);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(433, 3);
+            this.closeButton.AutoSize = true;
+            this.closeButton.Location = new System.Drawing.Point(475, 3);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(75, 23);
             this.closeButton.TabIndex = 0;
@@ -117,7 +120,7 @@
             // backgroundButton
             // 
             this.backgroundButton.AutoSize = true;
-            this.backgroundButton.Location = new System.Drawing.Point(290, 3);
+            this.backgroundButton.Location = new System.Drawing.Point(332, 3);
             this.backgroundButton.Name = "backgroundButton";
             this.backgroundButton.Size = new System.Drawing.Size(137, 23);
             this.backgroundButton.TabIndex = 1;
@@ -128,7 +131,7 @@
             // clearButton
             // 
             this.clearButton.AutoSize = true;
-            this.clearButton.Location = new System.Drawing.Point(190, 3);
+            this.clearButton.Location = new System.Drawing.Point(232, 3);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(94, 23);
             this.clearButton.TabIndex = 2;
@@ -139,7 +142,7 @@
             // showButton
             // 
             this.showButton.AutoSize = true;
-            this.showButton.Location = new System.Drawing.Point(96, 3);
+            this.showButton.Location = new System.Drawing.Point(138, 3);
             this.showButton.Name = "showButton";
             this.showButton.Size = new System.Drawing.Size(88, 23);
             this.showButton.TabIndex = 3;
@@ -162,7 +165,7 @@
             this.mainMenu.Location = new System.Drawing.Point(0, 0);
             this.mainMenu.Name = "mainMenu";
             this.mainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.mainMenu.Size = new System.Drawing.Size(608, 24);
+            this.mainMenu.Size = new System.Drawing.Size(657, 24);
             this.mainMenu.TabIndex = 1;
             this.mainMenu.Text = "File Menu";
             this.mainMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mainMenu_ItemClicked);
@@ -179,14 +182,14 @@
             // OpenFileMenuItem
             // 
             this.OpenFileMenuItem.Name = "OpenFileMenuItem";
-            this.OpenFileMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.OpenFileMenuItem.Size = new System.Drawing.Size(103, 22);
             this.OpenFileMenuItem.Text = "Open";
             this.OpenFileMenuItem.Click += new System.EventHandler(this.OpenFileMenuItem_Click);
             // 
             // ExitFileMenuItem
             // 
             this.ExitFileMenuItem.Name = "ExitFileMenuItem";
-            this.ExitFileMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ExitFileMenuItem.Size = new System.Drawing.Size(103, 22);
             this.ExitFileMenuItem.Text = "Exit";
             this.ExitFileMenuItem.Click += new System.EventHandler(this.ExitFileMenuItem_Click);
             // 
@@ -203,12 +206,23 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // Save
+            // 
+            this.Save.AutoSize = true;
+            this.Save.Location = new System.Drawing.Point(56, 3);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(76, 23);
+            this.Save.TabIndex = 4;
+            this.Save.Text = "Save";
+            this.Save.UseVisualStyleBackColor = true;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(608, 336);
+            this.ClientSize = new System.Drawing.Size(657, 336);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.mainMenu);
             this.MainMenuStrip = this.mainMenu;
@@ -245,6 +259,7 @@
         private System.Windows.Forms.ToolStripMenuItem ExitFileMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.Button Save;
     }
 }
 

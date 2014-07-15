@@ -12,6 +12,8 @@ namespace PictureViewerClone
 {
     public partial class Form1 : Form
     {
+        public string SavedFolder;
+
         public Form1()
         {
             InitializeComponent();
@@ -39,6 +41,12 @@ namespace PictureViewerClone
             if (openFileDialog1.ShowDialog()== DialogResult.OK)
             {
                 pictureBox1.Load(openFileDialog1.FileName);
+                SavedFolder = openFileDialog1.FileName;
+
+                using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\TestBox\all other\PictureViewer\WriteLines.txt", true))
+                {
+                    file.WriteLine(SavedFolder);
+                }
             }
         }
 
@@ -61,6 +69,16 @@ namespace PictureViewerClone
         private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Save_Click(object sender, EventArgs e)
+        {
+            String SavedImage = pictureBox1.ImageLocation;
+
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\TestBox\all other\PictureViewer\RememberImages.txt", true))
+            {
+                file.WriteLine(SavedImage);
+            }
         }
 
         #endregion
@@ -87,6 +105,8 @@ namespace PictureViewerClone
         }
 
         #endregion menu
+
+
 
     }
 }
